@@ -1,0 +1,7 @@
+.brands {
+	margin-bottom: 180px;
+
+	&__title {
+		text-align: center;
+	}
+}

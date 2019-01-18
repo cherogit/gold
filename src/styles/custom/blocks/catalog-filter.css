@@ -1,0 +1,64 @@
+.catalog-filter {
+	margin-bottom: 30px;
+
+	&__reset {
+		width: 100%;
+		margin-bottom: 15px;
+		text-align: right;
+	}
+
+	&__reset-btn {
+		position: relative;
+		padding-right: 25px;
+		font: 14px/36px var(--MontserratR);
+		color: var(--gray-dark);
+		transition: 300ms;
+
+		span {
+			display: block;
+		}
+
+		&:hover {
+			color: var(--orange);
+
+			svg {
+				fill: var(--orange);
+			}
+		}
+
+		svg {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			display: block;
+			width: 9px;
+			height: 9px;
+			fill: var(--gray);
+			transition: 300ms;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		.dropdown-filter {
+			flex-grow: 1;
+			max-width: 220px;
+			margin-bottom: 2px;
+		}
+	}
+
+	&__chips {
+		margin-bottom: 40px;
+		padding: 20px 0;
+	}
+
+	&__sorting {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}

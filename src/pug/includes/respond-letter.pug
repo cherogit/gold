@@ -1,0 +1,36 @@
+.respond__wrapper
+	.popup-thanks.mfp-hide#respondThank
+		p.popup-thanks__title Спасибо за отклик!
+		p.popup-thanks__text Мы внимательно ознакомимся с вашим резюме и обязательно дадим ответ в б лижайшее время.
+	.respond__letter
+		form.respond-form
+			.respond-form__fields
+				label.respond-form__field.label
+					span Имя и фамилия
+					input.input(type="text" placeholder="Василий Пупкин")/
+				label.respond-form__field.label
+					span E-mail
+					input.input(type="mail" placeholder="o.semenova@gmail.com")/
+				label.respond-form__field.label
+					span Комментарий
+					textarea.textarea(name="")
+				.attach
+					label.respond-form__field
+						input.attach__field(type="file")/
+						.attach__text
+							span.attach__text-name Прикрепить файлы
+							span.attach__text-formats в формате doc, docx, pdf, txt
+					.attach__file
+						.attach__file-name filename
+						.attach__file-remove remove
+				label.respond-form__agreement.agreement.checkbox
+					input.checkbox__check(type="checkbox" required)/
+					span.checkbox__text Я согласен на&nbsp;
+						a(href="./personal-data.html" target="_blank") обработку персональных данных
+				button.respond-form__submit.btn._black(type="submit" disabled) Отправить
+
+	.respond__envelope
+		.respond__envelope-lid
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.08 226.46"><polygon class="cls-1" points="0.46 0.25 718.75 0.85 144.06 226.15 0.46 0.25"/></svg>
+		.respond__envelope-body
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.96 281.09"><path d="M-278.16,313.36c0,12.49-15.2,22.71-33.77,22.71H-964.84c-18.57,0-33.77-10.22-33.77-22.71V56L-860,242.63-278.15,56V313.36h0Z" transform="translate(998.86 -55.23)"/><line x1="139.15" y1="187.29" x2="0.36" y2="227.05"/></svg>

@@ -1,0 +1,14 @@
+.catalog {
+	
+	&__promo {
+		margin-bottom: 15px;
+		padding-bottom: 50px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		
+		.breadcrumbs {
+			margin-bottom: 18px;
+		}
+	}
+}

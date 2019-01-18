@@ -1,0 +1,26 @@
+.figurines {
+	position: relative;
+	max-width: 420px;
+	margin: 0 auto;
+
+	&__image {
+		img {
+			height: 220px;
+			width: auto;
+			margin: 0 auto 60px;
+		}
+	}
+
+	&__desc {
+		text-align: center;
+		font-size: 14px;
+	}
+
+	&__dots {
+		position: absolute;
+		top: 240px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 9;
+	}
+}

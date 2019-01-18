@@ -1,0 +1,48 @@
+.corporate-philosophy {
+	
+	&__wrapper {
+		margin-bottom: calc(100 / 1920 * 100%);
+		background-image: resolve(corporate-philosophy-bg.png);
+		background-repeat: no-repeat;
+		background-size: auto 680px;
+		background-position: 50% 0;
+		
+		.text-block {
+			line-height: 24px;
+			color: var(--gray-dark);
+		}
+	}
+	
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
+		
+		&:nth-child(even) {
+			.corporate-philosophy__item-pict {
+				order: 2;
+			}
+		}
+	}
+	
+	&__item-pict {
+		width: calc(460 / 1200 * 100%);
+		text-align: center;
+		font-size: 0;
+		
+		img {
+			display: inline-block;
+			max-width: 330px;
+			max-height: 335px;
+		}
+	}
+	
+	&__item-desc {
+		width: calc(685 / 1200 * 100%);
+		padding-top: 50px;
+	}
+}

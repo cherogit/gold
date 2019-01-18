@@ -1,0 +1,249 @@
+include mixins/_breadcrumbs.pug
+include mixins/_catalog-list.pug
+include mixins/_dropdown-filter__list.pug
+include mixins/_chips.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+			.catalog
+				.catalog__promo(style="background-color: #fef5ea; background-image: url('./assets/img/catalog-promo-pict.jpg')")
+					+breadcrumbs(['Каталог','Для женщин'])
+					.container
+						h1.h1.catalog__title Украшения для женщин
+						a.btn._white(href="#") Заглянуть в шкатулку
+
+				.catalog__wrapper.container
+					.catalog-filter
+						.catalog-filter__reset
+							button.catalog-filter__reset-btn(type="button")
+								span Очистить фильтры
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M926.9 990a63 63 0 0 1-44.6-18.5L28.5 117.7a63 63 0 1 1 89.2-89.2l853.7 853.7A63 63 0 0 1 926.9 990z"/><path d="M73.1 990a63 63 0 0 1-44.6-107.7L882.3 28.5a63 63 0 1 1 89.2 89.2L117.7 971.5A62.8 62.8 0 0 1 73.1 990z"/></svg>
+						.catalog-filter__list
+							+dropdown-filter__list([
+								{
+									defaultValue: 'Вид украшения',
+									resetBtn: 'true',
+									typeFilter: 'list',
+									typeList: 'radio',
+									typeListName: 'jewelery',
+									list: [
+										{
+											images: ['http://placehold.it/50x20', 'http://placehold.it/50x20', 'http://placehold.it/50x20', 'http://placehold.it/50x20'],
+											values: ['Кольцо', 'Серьги', 'Браслеты', 'Колье']
+										}
+									]
+								},
+								{
+									defaultValue: 'Цена',
+									typeFilter: 'range',
+									rangeMin: '0',
+									rangeMax: '1000000',
+									rangeDefaultMin: '250000',
+									rangeDefaultMax: '600000'
+								},
+								{
+									defaultValue: 'Материал',
+									resetBtn: 'true',
+									typeFilter: 'list',
+									typeList: 'checkbox',
+									typeListName: 'material',
+									list: [
+										{
+											values: ['Белое золото 585', 'Желтое золото 585', 'Красное золото 585', 'Комбинированное <br /> золото 585', 'Серебро 925']
+										}
+									]
+								},
+								{
+									defaultValue: 'Размер',
+									resetBtn: 'true',
+									typeFilter: 'list',
+									typeList: 'checkbox',
+									typeListName: 'size',
+									list: [
+										{
+											values: ['15', '15.5', '16', '16.5', '17', '17.5', '18', '18.5', '19', '19.5', '20', '20.5', '21', '21.5', '22']
+										}
+									]
+								},
+								{
+									defaultValue: 'Вставка',
+									resetBtn: 'true',
+									searchLine: 'true',
+									typeFilter: 'list',
+									typeList: 'checkbox',
+									typeListName: 'insert',
+									list: [
+										{
+											letter: 'А',
+											values: ['Агат', 'Аквамарин', 'Аметист', 'Апатит']
+											
+										},
+										{
+											letter: 'Б',
+											values: ['Бирюза']
+										}
+									]
+								},
+								{
+									defaultValue: 'Бренд',
+									resetBtn: 'true',
+									searchLine: 'true',
+									typeFilter: 'list',
+									typeList: 'checkbox',
+									typeListName: 'brand',
+									list: [
+										{
+											letter: 'А',
+											images: ['http://placehold.it/50x20', 'http://placehold.it/50x20', 'http://placehold.it/50x20'],
+											values: ['Аврора', 'Адамас', 'Алькор']
+										},
+										{
+											letter: 'Б',
+											images: ['http://placehold.it/50x20', 'http://placehold.it/50x20', 'http://placehold.it/50x20'],
+											values: ['Бронниский ювелир', 'Van Cleef & Arpels', 'Tiffany & Co.']
+										}
+									]
+								},
+								{
+									defaultValue: 'Коллекция',
+									resetBtn: 'true',
+									searchLine: 'true',
+									typeFilter: 'list',
+									typeList: 'checkbox',
+									typeListName: 'collection',
+									list: [
+										{
+											letter: 'A',
+											values: ['Adele', 'Aqurelle']
+										},
+										{
+											letter: 'C',
+											values: ['Cherry']
+										},
+										{
+											letter: 'F',
+											values: ['Fancy', 'Forever']
+										},
+										{
+											letter: 'A',
+											values: ['Adele', 'Aqurelle']
+										},
+										{
+											letter: 'C',
+											values: ['Cherry']
+										},
+										{
+											letter: 'F',
+											values: ['Fancy', 'Forever']
+										}
+									]
+								},
+								{
+									defaultValue: 'Стиль',
+									resetBtn: 'true',
+									typeFilter: 'list',
+									typeList: 'checkbox',
+									typeListName: 'style',
+									list: [
+										{
+											images: ['http://placehold.it/50x20', 'http://placehold.it/50x20', 'http://placehold.it/50x20', 'http://placehold.it/50x20'],
+											values: ['С рисунком', 'Тонкое', 'Широкое', 'Со вставкой']
+										}
+									]
+								}
+							], '_chips')
+
+						.catalog-filter__chips
+							+chips([
+								{
+									name: 'Цена:',
+									values: ['2 500 - 7 000 руб.']
+								},
+								{
+									name: 'Материал:',
+									values: ['Белое золото 585', 'Желтое золото 585', 'Красное золото 585']
+								},
+								{
+									name: 'Размер:',
+									values: ['15', '16', '17.5']
+								},
+								{
+									name: 'Вставка:',
+									values: ['Аметист']
+								},
+								{
+									name: 'Коллекция:',
+									values: ['Cherry', 'Van Cleef & Arpels', 'Tiffany & Co.']
+								}
+							])
+
+						.catalog-filter__sorting
+							.catalog-filter__amount 1 560 изделий
+							.catalog-filter__sorting-select.sorting-select
+								.sorting-select__selected По популярности
+								ul.sorting-select__list
+									li.sorting-select__item.link По популярности
+									li.sorting-select__item.link Сначала дешевые
+									li.sorting-select__item.link Сначала дорогие
+									li.sorting-select__item.link По новинкам
+									li.sorting-select__item.link По скидкам
+
+
+
+
+					.catalog-list._mb0
+						+catalog-list([
+							{
+								discount: '-97%',
+								preview: ['./assets/uploads/card-img3.jpg'],
+								title: 'ОДНА ФОТКА',
+								price: '5 899 руб.',
+								oldPrice: '49 765 руб.'
+							},
+							{
+								preview: ['./assets/uploads/card-img4.jpg', './assets/uploads/card-img5.jpg', './assets/uploads/card-img6.jpg', './assets/uploads/card-img7.jpg'],
+								title: 'Кольцо из золота с аместистами',
+								price: '350 899 руб.',
+							},
+							{
+								discount: '-42%',
+								preview: ['./assets/uploads/card-img1.jpg', './assets/uploads/card-img2.png', './assets/uploads/card-img3.jpg'],
+								title: 'Кольцо из золота с аместистами',
+								price: '13 497 руб.',
+								oldPrice: '22 314 руб.'
+							},
+							{
+								discount: '-42%',
+								preview: ['./assets/uploads/card-img1.jpg', './assets/uploads/card-img2.png', './assets/uploads/card-img3.jpg'],
+								title: 'Кольцо из золота с аместистами',
+								price: '132 056 руб.',
+								oldPrice: '192 800 руб.'
+							},
+							{
+								discount: '-17%',
+								preview: ['./assets/uploads/card-img2.png'],
+								title: 'ОДНА ФОТКА',
+								price: '92 199 руб.',
+								oldPrice: '100 318 руб.'
+							}
+						])
+					
+					.show-more
+						.show-more__text Вы посмотрели 20 из 1560 изделий
+						button.btn._white(type="button") Показать еще 20
+					include includes/pagination.pug
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

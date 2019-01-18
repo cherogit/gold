@@ -1,0 +1,16 @@
+mixin chips(list)
+	each object in list
+		.chips-category
+			.chips-category__name= object.name
+			each chip in object.values
+				.chips-category__selected
+					.chips-category__selected-value= chip
+					button.chips-category__selected-reset(type="button")
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M926.9 990a63 63 0 0 1-44.6-18.5L28.5 117.7a63 63 0 1 1 89.2-89.2l853.7 853.7A63 63 0 0 1 926.9 990z"/><path d="M73.1 990a63 63 0 0 1-44.6-107.7L882.3 28.5a63 63 0 1 1 89.2 89.2L117.7 971.5A62.8 62.8 0 0 1 73.1 990z"/></svg>
+
+
+
+
+
+
+

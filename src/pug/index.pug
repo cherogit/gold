@@ -1,0 +1,165 @@
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+		
+		main.main
+			.promo
+				.promo__smoke
+					<video id="video" muted autoplay loop poster="./assets/images/pict/poster.jpg">
+						//- <source src="./assets/source/Smoke-proba-2.webm" type="video/webm"/>
+						<source src="./assets/source/Smoke-proba-4.mp4" type="video/mp4"/>
+						| Your browser does not support HTML5 video.
+					</video>
+				.promo__wrapper.container
+					.promo-slider.slider-wrap
+						button.promo-slider__prev.slider-wrap__arrow._prev(type="button")
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+						.promo-slider__track
+							.promo-slider__item
+								.promo-slider__item-wrapper
+									.promo-slider__item-pict
+										img(src="./assets/uploads/promo-slider_slide1.png", alt="")/
+									a.btn._white(href="./catalog.html") Перейти в каталог
+							.promo-slider__item
+								.promo-slider__item-wrapper
+									.promo-slider__item-pict
+										img(src="./assets/uploads/promo-slider_slide2.png", alt="")/
+									a.btn._white(href="./catalog.html") Перейти в каталог
+							.promo-slider__item
+								.promo-slider__item-wrapper
+									.promo-slider__item-pict
+										img(src="./assets/uploads/promo-slider_slide3.png", alt="")/
+									a.btn._white(href="./catalog.html") Перейти в каталог
+							.promo-slider__item
+								.promo-slider__item-wrapper
+									.promo-slider__item-pict
+										img(src="./assets/uploads/promo-slider_slide4.png", alt="")/
+									a.btn._white(href="./catalog.html") Перейти в каталог
+
+						button.promo-slider__next.slider-wrap__arrow._next(type="button")
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+			.main-filter
+				h2.h1.main-filter__title Найдите подарок себе и близким
+			.new-collection
+				.new-collection__promo
+					.container
+						h2.h1.new-collection__title Новые поступления
+				.new-collection__navigation.catalog-nav
+					.container
+						nav.catalog-nav__wrapper
+							a.catalog-nav__link.link(href="./catalog.html") Для мужчин
+							a.catalog-nav__link.link(href="./catalog.html") Для женщин
+							a.catalog-nav__link.link(href="./catalog.html") Для детей
+							a.catalog-nav__link.link(href="./catalog.html") Бриллианты
+							a.catalog-nav__link.link(href="./catalog.html") Свадебные украшения
+							a.catalog-nav__link.link(href="./catalog.html") Часы
+
+				.container
+					.new-collection__list
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-1.jpg", alt="")/
+							.new-collection__item-title 
+								span Женщинам
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-2.jpg", alt="")/
+							.new-collection__item-title 
+								span Мужчинам
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.new-collection__item-title 
+								span Часы
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-4.jpg", alt="")/
+							.new-collection__item-title 
+								span Бриллианты
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-5.jpg", alt="")/
+							.new-collection__item-title 
+								span Бриллианты
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-6.jpg", alt="")/
+							.new-collection__item-title 
+								span Детям
+						a.new-collection__item(href="#")
+							.new-collection__item-wrap
+								img.new-collection__item-pict(src="./assets/uploads/new-collection__item-4.jpg", alt="")/
+							.new-collection__item-title 
+								span Бриллианты
+
+					.special-offers
+						a.special-offers__item(href="#")
+							img.special-offers__item-pict(src="./assets/uploads/special-offers__item-1.jpg", alt="")/
+							.special-offers__item-info
+								.special-offers__item-title Бонусная программа
+								.special-offers__item-desc Оплачивайте бонусами до 50% от стоимости покупки
+						a.special-offers__item(href="#")
+							img.special-offers__item-pict(src="./assets/uploads/special-offers__item-2.jpg", alt="")/
+							.special-offers__item-info
+								.special-offers__item-title Распродажа
+			
+			.advantages
+				.advantages__wrapper.container
+					h2.h1.advantages__title С нами комфортно
+					.advantages__slogan Мы работаем, чтобы вы наслаждались покупками
+					img.advantages__pict(src="./assets/img/advantages-pict.png", alt="")/
+
+			
+			.brands
+				.brands__wrapper.container
+					h2.h1.brands__title Наши бренды
+					.brands-slider.slider-wrap
+						button.brands-slider__prev.slider-wrap__arrow._prev(type="button")
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+						.brands-slider__track
+							.brands-slider__slide
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-1.svg", alt="")/
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-2.png", alt="")/
+							.brands-slider__slide
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-3.png", alt="")/
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-4.png", alt="")/
+							.brands-slider__slide
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-5.png", alt="")/
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-6.png", alt="")/
+							.brands-slider__slide
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-7.svg", alt="")/
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-8.png", alt="")/
+							.brands-slider__slide
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-9.png", alt="")/
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-10.png", alt="")/
+							.brands-slider__slide
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-3.png", alt="")/
+								a.brands-slider__item(href="#")
+									img.brands-slider__item-pict(src="./assets/img/brands-logo-1.svg", alt="")/
+
+						button.brands-slider__next.slider-wrap__arrow._next(type="button")
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+
+
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

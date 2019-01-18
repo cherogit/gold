@@ -1,0 +1,265 @@
+include mixins/_breadcrumbs.pug
+include mixins/_dropdown-filter__list.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+		
+		main.main
+			.career
+				+breadcrumbs(['Главная', 'Карьера'])
+				
+				.career__wrapper.container
+					.career__info
+						.career__info-item
+							img.career__info-pict(src="./assets/img/career_info-pict-1.jpg" alt="")/
+							.career__info-desc
+								h1.h1.career__title Карьера
+								.text-block
+									p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа модели развития. Не следует, однако забывать, что консультация с широким активом в значительной
+									ul
+										li Осуществление клиентской поддержки
+										li Получения Пользователем информации о маркетинговых событиях
+										li Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.
+						.career__info-item
+							img.career__info-pict(src="./assets/img/career_info-pict-2.jpg" alt="")/
+							.career__info-desc
+								h2.h2 Мы предлагаем
+								.text-block
+									p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. степени обуславливает создание существенных финансовых и административных условий.
+									ul
+										li интересную работу в стабильной и развивающейся компании;
+										li быстрый карьерный рост;
+										li достойный уровень дохода;
+										li удобный график работы;
+
+					.employee-stories
+						h2.h2._centered.employee-stories__title Истории сотрудников
+						.employee-stories__slider.slider-wrap
+							.slider-wrap__dots.employee-stories__dots
+							button.employee-stories__slider-prev.slider-wrap__arrow._prev(type="button")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+							.employee-stories__track
+								.employee-stories__item
+									.employee-stories__item-pict
+										.employee-stories__item-photo
+											img(src="./assets/uploads/employee-stories-img-1.jpg" alt="")/
+									.employee-stories__item-info
+										.employee-stories__item-name Ольга
+										.employee-stories__item-position Менеджер отдела продаж
+										.employee-stories__item-text «Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития».
+								.employee-stories__item
+									.employee-stories__item-pict
+										.employee-stories__item-photo
+											img(src="https://tysa.ru/assets/thumbnails/5f/5fd96de7263b1de9aeb2565c380ab96d.jpg" alt="")/
+									.employee-stories__item-info
+										.employee-stories__item-name Хит Леджер
+										.employee-stories__item-position Постоянный покупатель
+										.employee-stories__item-text «Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития».
+								.employee-stories__item
+									.employee-stories__item-pict
+										.employee-stories__item-photo
+											img(src="https://tysa.ru/assets/thumbnails/5f/5fd96de7263b1de9aeb2565c380ab96d.jpg" alt="")/
+									.employee-stories__item-info
+										.employee-stories__item-name Хит Леджер 2
+										.employee-stories__item-position Постоянный покупатель
+										.employee-stories__item-text text
+							button.employee-stories__slider-next.slider-wrap__arrow._next(type="button")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+
+
+
+
+					h2.h2._centered Ищем в команду
+					.vacancies
+						.vacancies__filter
+							.vacancies__filter-item
+								span Город
+								+dropdown-filter__list([
+								{
+									defaultValue: 'Краснодар',
+									typeFilter: 'list',
+									typeList: 'radio',
+									typeListName: 'cities',
+									list: [
+										{
+											letter: 'А',
+											values: ['Абакан', 'Азов', 'Альметьевск', 'Ангарск', 'Арзамас', 'Армавир', 'Архангельск', 'Астрахань', 'Ачинск']
+										},
+										{
+											letter: 'Б',
+											values: ['Барнаул', 'Белгород', 'Бийск', 'Благовещенск', 'Братск', 'Брянск']
+										},
+										{
+											letter: 'В',
+											values: ['Великие Луки', 'Великий Новгород', 'Владивосток', 'Владикавказ', 'Владимир', 'Волгоград', 'Волгодонск', 'Волжский', 'Вологда', 'Воркута', 'Воронеж']
+										},
+										{
+											letter: 'Г',
+											values: ['Грозный']
+										},
+										{
+											letter: 'Д',
+											values: ['Дзержинск']
+										},
+										{
+											letter: 'Е',
+											values: ['Екатеринбург', 'Елец', 'Ессентуки']
+										},
+										{
+											letter: 'И',
+											values: ['Иваново', 'Ижевск', 'Иркутск']
+										},
+										{
+											letter: 'Й',
+											values: ['Йошкар-Ола']
+										},
+										{
+											letter: 'К',
+											values: ['Казань', 'Калининград', 'Калуга', 'Камышин', 'Кемерово', 'Киров', 'Кисловодск', 'Ковров', 'Коломна', 'Комсомольск-на-Амуре', 'Кострома', 'Красногорск', 'Краснодар', 'Красноярск', 'Курган', 'Курск', 'Кызыл']
+										},
+										{
+											letter: 'Л',
+											values: ['Липецк']
+										},
+										{
+											letter: 'М',
+											values: ['Магадан', 'Магнитогорск', 'Майкоп', 'Междуреченск', 'Миасс', 'Москва', 'Мурманск', 'Муром', 'Мытищи']
+										},
+										{
+											letter: 'Н',
+											values: ['Набережные', 'Челны', 'Назрань', 'Нальчик', 'Находка', 'Нефтекамск', 'Нефтеюганск', 'Нижневартовск', 'Нижнекамск', 'Нижний Новгород', 'Нижний Тагил', 'Новокузнецк', 'Новокуйбышевск', 'Новороссийск', 'Новосибирск', 'Новоуральск', 'Новочеркасск', 'Новый Уренгой', 'Норильск', 'Ноябрьск']
+										},
+										{
+											letter: 'О',
+											values: ['Обнинск', 'Одинцово', 'Омск', 'Орел', 'Оренбург', 'Орехово-Зуево']
+										},
+										{
+											letter: 'П',
+											values: ['Пенза', 'Пермь', 'Петрозаводск', 'Петропавловск-Камчатский', 'Псков', 'Пятигорск']
+										},
+										{
+											letter: 'Р',
+											values: ['Ростов-на-Дону', 'Рыбинск', 'Рязань']
+										},
+										{
+											letter: 'С',
+											values: ['Самара', 'Санкт-Петербург', 'Саранск', 'Саратов', 'Сергиев Посад', 'Серпухов', 'Смоленск', 'Соликамск', 'Сочи', 'Ставрополь', 'Старый', 'Оскол', 'Стерлитамак', 'Сызрань', 'Сыктывкар']
+										},
+										{
+											letter: 'Т',
+											values: ['Таганрог', 'Тамбов', 'Тверь', 'Тобольск', 'Тольятти', 'Томск', 'Туапсе', 'Тюмень']
+										},
+										{
+											letter: 'У',
+											values: ['Улан-Удэ', 'Ульяновск', 'Уссурийск', 'Уфа', 'Ухта']
+										},
+										{
+											letter: 'Х',
+											values: ['Хабаровск', 'Химки']
+										},
+										{
+											letter: 'Ч',
+											values: ['Чебоксары', 'Челябинск', 'Череповец', 'Чита']
+										},
+										{
+											letter: 'Э',
+											values: ['Элиста', 'Энгельс']
+										},
+										{
+											letter: 'Ю',
+											values: ['Южно-Сахалинск']
+										},
+										{
+											letter: 'Я',
+											values: ['Якутск Ярославль']
+										}
+									]
+								}
+							], '')
+
+
+							.vacancies__filter-item
+								span Сфера деятельности
+
+								+dropdown-filter__list([
+								{
+									defaultValue: 'Продажи',
+									typeFilter: 'list',
+									typeList: 'radio',
+									typeListName: 'activity',
+									list: [
+										{
+											values: ['Продажи', 'Административный персонал', 'Финансы', 'Транспорт, логистика', 'Высший менеджмент', 'Производство', 'Рабочий персонал', 'Информационные технологии', 'Закупки', 'Консультирование', 'Юристы']
+										}
+									]
+								}
+							], '')
+
+						ul.vacancies-list
+							li.vacancies-list__item
+								.vacancies-list__item-info
+									.vacancies-list__item-position Team Lead frontend-developer
+									.vacancies-list__item-labels
+										button.vacancies-list__item-label._city(type="button") Санкт-Петербург
+										button.vacancies-list__item-label._area(type="button") Информационные технологии
+								a.btn._white(href="./jobopening.html") К вакансии
+							li.vacancies-list__item
+								.vacancies-list__item-info
+									.vacancies-list__item-position Продавец-кассир
+									.vacancies-list__item-labels
+										button.vacancies-list__item-label._city(type="button") Ростов-на-Дону
+										button.vacancies-list__item-label._area(type="button") Продажи
+								a.btn._white(href="./jobopening.html") К вакансии
+							li.vacancies-list__item
+								.vacancies-list__item-info
+									.vacancies-list__item-position Продавец-консультант
+									.vacancies-list__item-labels
+										button.vacancies-list__item-label._city(type="button") Великий Новгород
+										button.vacancies-list__item-label._area(type="button") Продажи
+								a.btn._white(href="./jobopening.html") К вакансии
+							li.vacancies-list__item
+								.vacancies-list__item-info
+									.vacancies-list__item-position Товаровед
+									.vacancies-list__item-labels
+										button.vacancies-list__item-label._city(type="button") Москва
+										button.vacancies-list__item-label._area(type="button") Продажи
+								a.btn._white(href="./jobopening.html") К вакансии
+							li.vacancies-list__item
+								.vacancies-list__item-info
+									.vacancies-list__item-position Старший продавец-кассир
+									.vacancies-list__item-labels
+										button.vacancies-list__item-label._city(type="button") Магадан
+										button.vacancies-list__item-label._area(type="button") Продажи
+								a.btn._white(href="./jobopening.html") К вакансии
+							li.vacancies-list__item
+								.vacancies-list__item-info
+									.vacancies-list__item-position Менеджер отдела продаж
+									.vacancies-list__item-labels
+										button.vacancies-list__item-label._city(type="button") Новосибирск
+										button.vacancies-list__item-label._area(type="button") Продажи
+								a.btn._white(href="./jobopening.html") К вакансии
+
+						.show-more
+							button.btn._white(type="button") Показать еще 10
+
+					.respond
+						h2.h2._centered.respond__title Присоединяйтесь к нам
+						.respond__desc.text-block
+							p Мы всегда находимся в поисках талантливых сотрудников,нацеленных на успех. Если вы не нашли подходящей вакансии, но уверены, что сможете стать незаменимым членом нашей команды, то напишите нам письмо на почту <a href="mailto:zoloto-yuga@mail.ru">zoloto-yuga@mail.ru</a> или заполните форму.
+						include includes/respond-letter.pug
+
+
+
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

@@ -1,0 +1,72 @@
+.range-slider {
+	padding: 10px 5px 15px;
+
+	&__interval {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 25px;
+	}
+
+	&__row {
+		display: inline-flex;
+		align-items: center;
+		width: 90px;
+
+		&::before {
+			display: block;
+			margin-right: 10px;
+			font: 14px/36px var(--MontserratR);
+		}
+		
+		&._from {
+			&::before {
+				content: 'от';
+			}
+		}
+
+		&._before {
+			&::before {
+				content: 'до';
+			}
+		}
+	}
+}
+
+.ui-slider-horizontal {
+	height: 1px;
+	background: var(--border-gray);
+}
+
+.ui-slider-horizontal .ui-slider-range {
+	background: var(--gray);
+}
+
+.ui-slider .ui-slider-handle {
+	top: -.4em;
+	width: 14px;
+	height: 14px;
+	background: transparent;
+	border-radius: 0;
+	border: 1px solid var(--gray);
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 6px;
+		height: 6px;
+		background: var(--black);
+	}
+}
+
+.ui-widget.ui-widget-content {
+	border: 0;
+}

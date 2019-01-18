@@ -1,0 +1,51 @@
+.search-results {
+
+	&__title {
+		margin-bottom: 0;
+	}
+
+	&__filter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 25px;
+	}
+
+	&__nav {
+		display: inline-block;
+		column-count: 2;
+		column-width: 270px;
+		column-gap: 30px;
+	}
+
+	&__nav-item {
+		max-width: 270px;
+		padding: 12px 0;
+		font: 16px/24px var(--MontserratL);
+		color: var(--black);
+	}
+
+	&__nav-link {
+		border-bottom: 1px solid var(--gray);
+		transition: 300ms;
+
+		&:hover {
+			border-color: var(--orange);
+			color: var(--orange);
+		}
+	}
+
+	&__notfound {
+		max-width: 1040px;
+		margin: 0 auto 80px;
+		padding-top: 50px;
+	}
+
+	&__notfound-title {
+		margin-bottom: 80px;
+		text-align: center;
+		font: 20px/30px var(--MontserratL);
+		color: var(--black);
+	}
+}

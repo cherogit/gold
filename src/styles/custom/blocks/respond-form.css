@@ -1,0 +1,23 @@
+.respond-form {
+	position: relative;
+	z-index: 2;
+
+	&__header {
+		margin-bottom: 35px;
+		font: 16px/24px var(--MontserratR);
+		color: var(--black);
+
+		a {
+			transition: 300ms;
+
+			&:hover,
+			&:active {
+				color: var(--orange);
+			}
+		}
+	}
+
+	&__agreement {
+		margin-bottom: 15px;
+	}
+}

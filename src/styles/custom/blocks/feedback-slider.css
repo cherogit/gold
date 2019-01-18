@@ -1,0 +1,56 @@
+.feedback-slider {
+	margin: 0 auto;
+	padding: 95px 0 115px;
+	background: resolve('feedback-slider-bg.svg') center/contain no-repeat;
+	
+	&__dots {
+		position: absolute;
+		bottom: 55px;
+		left: 180px;
+	}
+	
+	&__item {
+		transform: translateX(-50px);
+		height: 455px;
+		padding: 0 100px;
+		outline: none;
+		text-align: center;
+	}
+	
+	&__item-pict {
+		position: relative;
+		display: inline-block;
+		width: 116px;
+		height: 165px;
+		margin-bottom: 35px;
+		overflow: hidden;
+		
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	}
+	
+	&__item-name,
+	&__item-text {
+		font: 20px/24px var(--MontserratL);
+		color: var(--black);
+	}
+	
+	&__item-position {
+		margin-bottom: 20px;
+		font: 16px/36px var(--MontserratR);
+		color: var(--gray-dark);
+	}
+	
+	&__item-text {
+		max-height: 125px;
+		overflow: hidden;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,91 @@
+include mixins/_breadcrumbs.pug
+include mixins/_accodrion-list.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+			.assurance
+				+breadcrumbs(['Главная', 'Корзина и оформление заказа'])
+				.assurance__wrapper.container
+					h1.h1._centered Гарантия качества
+					.assurance__content
+						.assurance__image._round
+							img(src="./assets/img/assurance-photo1.jpg" alt="")/
+						p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа модели развития. Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание существенных финансовых и административных условий.
+						h2.h2 Производители
+						.assurance__image._diamond
+							img(src="./assets/img/assurance-photo2.jpg" alt="")/
+						p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+						h2.h2 Дипломы и сертификаты
+						p С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+					.certificate
+						button.certificate__prev.slider-wrap__arrow._prev
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+						.certificate__list
+							.certificate__item
+								a.certificate__image(href="./assets/img/certificate.jpg")
+									img(src="./assets/img/certificate.jpg" alt="")/
+							.certificate__item
+								a.certificate__image(href="./assets/img/certificate.jpg")
+									img(src="./assets/img/certificate.jpg" alt="")/
+							.certificate__item
+								a.certificate__image(href="./assets/img/certificate.jpg")
+									img(src="./assets/img/certificate.jpg" alt="")/
+							.certificate__item
+								a.certificate__image(href="./assets/img/certificate.jpg")
+									img(src="./assets/img/certificate.jpg" alt="")/
+							.certificate__item
+								a.certificate__image(href="./assets/img/certificate.jpg")
+									img(src="./assets/img/certificate.jpg" alt="")/
+							.certificate__item
+								a.certificate__image(href="./assets/img/certificate.jpg")
+									img(src="./assets/img/certificate.jpg" alt="")/
+						button.certificate__next.slider-wrap__arrow._next
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+					h2.h2._centered Вопросы и ответы
+					+accodrion-list([
+                        {
+                            class: 'true',
+                            name: 'Как сделать заказ?',
+                            pict: './assets/uploads/accordion-image-1.jpg',
+                            text: 'Повседневная практика показывает, что начало <br /> повседневной работы по формированию позиции <br /> позволяет выполнять важные задания по разработке <br /> направлений прогрессивного развития.'
+                        },
+                        {
+                            name: 'Как отследить статус заказа?',
+                            text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+                        },
+                        {
+                            name: 'Как отменить заказ?',
+                            pict: 'http://placehold.it/285x190',
+                            text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+                        }
+                    ])
+					.get-touch
+						.get-touch__text Остались вопросы? Напишите нам на почту <br/>
+							a(href="mailto:zoloto-yuga@mail.ru") zoloto-yuga@mail.ru
+							| &nbsp; или заполните форму
+						a.btn._black.get-touch__btn.popup-ask(href="#askAQuestion") Задать свой вопрос
+						.popup.mfp-hide#askAQuestion
+							p.popup__title  Задать вопрос
+							form.popup__form
+								label.popup__label Имя
+									input.popup__input.focus(type="text" placeholder="Как вас зовут?")
+								label.popup__label E-mail
+									input.popup__input(type="email" placeholder="email@mail.com")
+								label.popup__label Комментарий
+									textarea.popup__textarea(placeholder="Опишите проблему, с которой вы столкнулись, или поделитесь своими впечатлениями. Нам важно знать ваше мнение.")
+								label.popup__label.popup__label-checkbox
+									input.popup__input-hide(type="checkbox")
+									span.popup__checkbox
+									p.popup__checkbox-text Я согласен на
+										span  обработку персональных данных
+								button.btn._black(type="submit") Отправить
+						.popup-thanks.mfp-hide#askAQuestionThank
+							p.popup-thanks__title Спасибо, ваш вопрос принят!
+		include includes/footer.pug
+		include includes/scripts.pug

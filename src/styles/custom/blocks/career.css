@@ -1,0 +1,43 @@
+.career {
+	
+	&__wrapper {
+		margin-bottom: calc(100 / 1920 * 100%);
+	}
+	
+	&__info {
+		width: calc(1055 / 1200 * 100%);
+		margin: 0 auto calc(100 / 1055 * 100%);
+	}
+	
+	&__info-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		
+		&:not(:last-child) {
+			margin-bottom: calc(100 / 1055 * 100%);
+		}
+		
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+	}
+	
+	&__info-pict {
+		display: block;
+		width: calc(490 / 1055 * 100%);
+		height: auto;
+	}
+	
+	&__info-desc {
+		width: calc(490 / 1055 * 100%);
+		padding-top: 18px;
+		
+		.text-block {
+			ul {
+				padding: 20px 0;
+			}
+		}
+	}
+}

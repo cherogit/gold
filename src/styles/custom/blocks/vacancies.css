@@ -1,0 +1,26 @@
+.vacancies {
+	width: calc(860 / 1200 * 100%);
+	margin: 0 auto calc(100 / 1200 * 100%);
+	
+	&__filter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-bottom: 22px;
+		border-bottom: 1px solid var(--border-gray);
+	}
+	
+	&__filter-item {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font: 14px/20px var(--MontserratL);
+		color: var(--black);
+		
+		& > span {
+			display: block;
+			margin-right: 25px;
+		}
+	}
+}

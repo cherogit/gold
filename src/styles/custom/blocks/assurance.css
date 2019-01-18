@@ -1,0 +1,58 @@
+.assurance {
+	&__content {
+		max-width: 675px;
+		padding: 0 15px;
+		margin: 0 auto;
+		color: black;
+
+		& > p {
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 30px;
+		}
+
+		& > h2 {
+			padding-top: 50px;
+			text-align: center;
+		}
+	}
+
+	&__image {
+		position: relative;
+		margin-bottom: 70px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 40%);
+			width: 70px;
+			height: 70px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&._round {
+			&::after {
+				background-image: resolve(assurance-round.svg);
+			}
+		}
+
+		&._diamond {
+			&::after {
+				background-image: resolve(assurance-diamond.svg);
+			}
+		}
+	}
+
+	.certificate {
+		margin-bottom: 100px;
+	}
+}

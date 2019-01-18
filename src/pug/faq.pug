@@ -1,0 +1,97 @@
+include mixins/_breadcrumbs.pug
+include mixins/_accodrion-list.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+			.faq
+				.faq__banner
+					+breadcrumbs(['Главная', 'Вопросы и ответы'])
+					.container
+						h1 Вопросы и ответы
+				.faq__wrapper.container
+					aside.faq__aside
+						button.faq__tab._js-active
+							span Заказы
+						button.faq__tab
+							span Оплата
+						button.faq__tab
+							span Доставка
+						button.faq__tab
+							span Бонусная программа
+						button.faq__tab
+							span Подбор размера изделия
+						button.faq__tab
+							span Гарантия и возврат
+					.faq__main
+						.faq__content._js-active
+							+accodrion-list([
+                                {
+                                    class: 'true',
+                                    name: 'Как сделать заказ?',
+                                    pict: './assets/uploads/accordion-image-1.jpg',
+                                    text: 'Повседневная практика показывает, что начало <br /> повседневной работы по формированию позиции <br /> позволяет выполнять важные задания по разработке <br /> направлений прогрессивного развития.'
+                                },
+                                {
+                                    name: 'Как отследить статус заказа?',
+                                    text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+                                },
+                                {
+                                    name: 'Как отменить заказ?',
+                                    pict: 'http://placehold.it/285x190',
+                                    text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+                                }
+                            ])
+						.faq__content
+							+accodrion-list([
+                                {
+                                    class: 'true',
+                                    name: 'Как совершить оплату?',
+                                    pict: './assets/uploads/accordion-image-1.jpg',
+                                    text: 'Повседневная практика показывает, что начало <br /> повседневной работы по формированию позиции <br /> позволяет выполнять важные задания по разработке <br /> направлений прогрессивного развития.'
+                                },
+                                {
+                                    name: 'Как отследить статус заказа?',
+                                    text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+                                },
+                                {
+                                    name: 'Как отменить заказ?',
+                                    pict: 'http://placehold.it/285x190',
+                                    text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+                                }
+                            ])
+						.faq__content
+						.faq__content
+						.faq__content
+						.faq__content
+						.get-touch
+							.get-touch__text Остались вопросы? Напишите нам на почту <br/>
+								a(href="mailto:zoloto-yuga@mail.ru") zoloto-yuga@mail.ru
+								| &nbsp; или заполните форму
+							a.btn._black.get-touch__btn.popup-ask(href="#askAQuestion") Задать свой вопрос
+							.popup.mfp-hide#askAQuestion
+								p.popup__title  Задать вопрос
+								form.popup__form
+									label.popup__label Имя
+										input.popup__input.focus(type="text" placeholder="Как вас зовут?")
+									label.popup__label E-mail
+										input.popup__input(type="email" placeholder="email@mail.com")
+									label.popup__label Комментарий
+										textarea.popup__textarea(placeholder="Опишите проблему, с которой вы столкнулись, или поделитесь своими впечатлениями. Нам важно знать ваше мнение.")
+									label.popup__label.popup__label-checkbox
+										input.popup__input-hide(type="checkbox")
+										span.popup__checkbox
+										p.popup__checkbox-text Я согласен на
+											span  обработку персональных данных
+									button.btn._black(type="submit") Отправить
+							.popup-thanks.mfp-hide#askAQuestionThank
+								p.popup-thanks__title Спасибо, ваш вопрос принят!
+
+
+		include includes/footer.pug
+		include includes/scripts.pug

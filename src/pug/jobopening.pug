@@ -1,0 +1,65 @@
+include mixins/_breadcrumbs.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+		
+		main.main
+			.jobopening
+				+breadcrumbs(['Главная', 'Карьера', 'Вакансия продавец-кассир'])
+				
+				.jobopening__wrapper.container
+					a.btn._go-back(href="./career.html") Вернуться в “Вакансии”
+
+					h1.h1._centered Вакансия продавец-кассир
+
+					.jobopening__categories
+						a.jobopening__categories-link(href="./career.html") Продажи
+						a.jobopening__categories-link(href="./career.html") Краснодар
+
+					.jobopening__desc
+						.jobopening__desc-col
+							img.jobopening__desc-pict(src="./assets/img/duty-pict.png", alt="")/
+							ul.jobopening__list
+								li.jobopening__list-item Консультирование покупателей по ассортименту товаров
+								li.jobopening__list-item Соблюдение корпоративных стандартов обслуживания покупателей;
+								li.jobopening__list-item Выполнение индивидуального плана продаж;
+								li.jobopening__list-item Контроль за сохранностью товара;
+								li.jobopening__list-item Работа на кассе, проведение операций по наличному и безналичному расчету, ведение кассовой отчетности;
+								li.jobopening__list-item Работа с товаром, соблюдение стандартов.
+						.jobopening__desc-col
+							img.jobopening__desc-pict(src="./assets/img/requirement-pict.png", alt="")/
+							ul.jobopening__list
+								li.jobopening__list-item Высшее/неоконченное высшее/среднее специальное образование;
+								li.jobopening__list-item Опыт личных продаж является преимуществом;
+								li.jobopening__list-item Активная жизненная позиция, грамотная речь, коммуникабельность и желание развиваться.
+								
+						.jobopening__desc-col
+							img.jobopening__desc-pict(src="./assets/img/we-offer-pict.png", alt="")/
+							ul.jobopening__list
+								li.jobopening__list-item Оформление по Трудовому Кодексу РФ;
+								li.jobopening__list-item Фиксированная почасовая ставка + % от личных продаж;
+								li.jobopening__list-item Ежемесячная фиксированная надбавка за ТОП категорию магазина;
+								li.jobopening__list-item Сменный график
+								li.jobopening__list-item Карьерный рост и обучение в рамках компании;
+								li.jobopening__list-item Молодой и дружный коллектив.
+					
+
+					.respond
+						h2.h2._centered.respond__title Откликнуться на вакансию
+						include includes/respond-letter.pug
+
+									
+							
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

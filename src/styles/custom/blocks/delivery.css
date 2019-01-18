@@ -1,0 +1,8 @@
+.delivery {
+	
+	&__promo {
+		margin-bottom: 10px;
+		padding-bottom: 28px;
+		background-color: var(--pale-gray);
+	}
+}

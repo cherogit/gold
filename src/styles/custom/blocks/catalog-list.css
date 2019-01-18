@@ -1,0 +1,9 @@
+.catalog-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: calc(80 / 1200 * 100%);
+
+	&._mb0 {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,41 @@
+.brands-slider {
+	padding: 10px 70px;
+
+	&__slide {
+		margin: 0 20px;
+		outline: none;
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		height: 114px;
+		margin-bottom: 20px;
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		filter: grayscale(100%);
+		border-width: 1px 2px;
+		border-style: solid;
+		border-color: transparent;
+		transition: 400ms;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			filter: grayscale(0%);
+			border-color: var(--border-gray);
+		}
+	}
+
+	&__item-pict {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+		max-width: 80%;
+		max-height: 80%;
+	}
+}

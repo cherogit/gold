@@ -1,0 +1,9 @@
+.main-logo {
+	transform: translateY(-12px);
+	width: 226px;
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

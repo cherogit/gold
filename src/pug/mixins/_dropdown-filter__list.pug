@@ -1,0 +1,51 @@
+mixin dropdown-filter__list(array, modifier)
+	each filter in array
+		div(class=(modifier) ? "dropdown-filter" + " " + modifier: "dropdown-filter" )
+			button.dropdown-filter__btn(type="button")
+				span.dropdown-filter__btn-toggle
+				span(class=(filter.typeList === 'radio') ? "dropdown-filter__btn-name _fixedWidth" : "dropdown-filter__btn-name")= filter.defaultValue
+			.dropdown-filter__cont
+				case filter.typeFilter
+					when "list"
+						if (filter.resetBtn)
+							button.dropdown-filter__reset(type="button") Сбросить
+						if (filter.searchLine)
+							.dropdown-filter__search
+								input.input._search(type="text")/
+								button.dropdown-filter__search-icon(type="button")
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.11 9.47"><path d="M9.06 9.16L6.41 6.4a3.75 3.75 0 1 0-2.66 1.11 3.75 3.75 0 0 0 2.4-.87l2.66 2.77a.16.16 0 0 0 .13.06.18.18 0 0 0 .12-.05.19.19 0 0 0 0-.26zm-5.31-2a3.4 3.4 0 1 1 3.4-3.4 3.4 3.4 0 0 1-3.4 3.39z"/></svg>
+						.dropdown-filter__cont-body.custom-scrollbar
+							each object in filter.list
+								ul(class=(object.letter) ? "dropdown-filter__list dropdown-list _with-letter" : "dropdown-filter__list dropdown-list")
+									li.dropdown-list__letter= object.letter
+									if (object.values)
+										each val, ndx in object.values
+											li.dropdown-list__item
+												label(class=(filter.typeList) ? filter.typeList : "")
+													input(class=(filter.typeList) ? filter.typeList + "__check" : "")(type= filter.typeList, name= (filter.typeListName) ? filter.typeListName : "")/
+													if (object.images)
+														div(class=(filter.typeList) ? filter.typeList + "__text" : "")
+															.dropdown-list__item-pict
+																img(src= object.images[ndx])/
+															span= val
+													else
+														span(class=(filter.typeList) ? filter.typeList + "__text" : "")!= val
+						- break
+
+					when "range"
+						.range-slider
+							.range-slider__interval
+								label.range-slider__row._from
+									input.input.range-slider__field._min(type="number" data-min= filter.rangeMin value= filter.rangeDefaultMin)/
+								label.range-slider__row._before
+									input.input.range-slider__field._max(type="number" data-max= filter.rangeMax value= filter.rangeDefaultMax)/
+							.range-slider__line
+						- break
+					default
+						p default
+
+
+
+
+
+

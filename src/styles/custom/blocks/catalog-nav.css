@@ -1,0 +1,33 @@
+.catalog-nav {
+	width: 100%;
+	background: white;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 55px;
+
+		._sticky & {
+			height: 50px;
+		}
+	}
+
+	&__link {
+		font: 18px/24px var(--MontserratL);
+		color: var(--gray-dark);
+		transition: color 300ms;
+
+		._small & {
+			font-size: 14px;
+
+			&:hover {
+				color: var(--orange);
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}

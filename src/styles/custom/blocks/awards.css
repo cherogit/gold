@@ -1,0 +1,45 @@
+.awards {
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 60px;
+	}
+
+	&__half {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 50%;
+		min-height: 400px;
+		padding: 0 60px;
+
+		.awards__text {
+			max-width: 430px;
+		}
+	}
+
+	&__line {
+		width: 100%;
+		text-align: center;
+		padding-top: 60px;
+		margin-bottom: 60px;
+
+		.awards__text {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__text {
+		line-height: 24px;
+	}
+
+	&__image {
+		position: absolute;
+		top: 50%;
+		left: 60px;
+		transform: translateY(-50%);
+		max-width: calc(100% - 120px);
+		max-height: 100%;
+	}
+}

@@ -1,0 +1,35 @@
+.aside {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 310px;
+	left: calc((100% - 820px) / 2);
+	transform: translateX(-100%);
+
+	&__link {
+		font-size: 0;
+		margin: 7px 0;
+
+		svg {
+			height: 24px;
+			fill: black;
+			transition: 300ms;
+		}
+
+		&:hover {
+			svg {
+				fill: var(--orange);
+			}
+		}
+	}
+
+	&._sticky {
+		position: fixed;
+		top: 100px;
+	}
+
+	&._bottom {
+		top: auto;
+		bottom: 50px;
+	}
+}

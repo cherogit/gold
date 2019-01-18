@@ -1,0 +1,13 @@
+.personal-data {
+	&__wrapper {
+		max-width: 730px;
+		margin: 0 auto calc(80 / 1200 * 100%);
+		
+		.text-block {
+			ul,
+			ol {
+				padding: 25px 0;
+			}
+		}
+	}
+}

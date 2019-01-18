@@ -1,0 +1,28 @@
+.social {
+	display: flex;
+	width: calc(255 / 1200 * 100%);
+
+	&__link {
+		display: block;
+		border-radius: 10px;
+		background: white;
+
+		&:not(:last-of-type) {
+			margin-right: 14px;
+		}
+
+		&:hover {
+			svg {
+				fill: var(--orange);
+			}
+		}
+
+		svg {
+			display: block;
+			width: 25px;
+			height: 25px;
+			fill: var(--black);
+			transition: 300ms;
+		}
+	}
+}

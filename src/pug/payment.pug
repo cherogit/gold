@@ -1,0 +1,94 @@
+include mixins/_breadcrumbs.pug
+include mixins/_accodrion-list.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+			.payment
+				.payment__promo.service
+					+breadcrumbs(['Главная', 'Оплата'])
+					.container
+						h1.h1._centered.service__title Оплата
+						h2.h2._centered.service__subtitle Способы оплаты
+						.service-list
+							.service-list__item
+								.service-list__item-pict
+									img(src="./assets/icon/cash-icon.svg" width="70" height="73" alt="")/
+								.service-list__item-title Наличный расчет
+								.service-list__item-desc Разнообразный и богатый опыт укрепление <br/> и развитие структуры позволяет оценить <br/> значение дальнейших направлений развития. <br/> Задача организации, в особенности же новая <br/> модель организационной деятельности.
+							.service-list__item
+								.service-list__item-pict
+									img(src="./assets/icon/cashless-icon.svg" width="80" height="68" alt="")/
+								.service-list__item-title Оплата банковскими картами
+								.service-list__item-desc Разнообразный и богатый опыт укрепление <br/> и развитие структуры позволяет оценить <br/> значение дальнейших направлений развития. <br/> Задача организации, в особенности же новая <br/> модель организационной деятельности.
+								.service-list__item-icons
+									.service-list__item-icon
+										img(src="./assets/icon/payment-methods-icon-1.svg" width="32" height="20" alt="")/
+									.service-list__item-icon
+										img(src="./assets/icon/payment-methods-icon-2.svg" width="35" height="21" alt="")/
+									.service-list__item-icon
+										img(src="./assets/icon/payment-methods-icon-3.svg" width="35" height="21" alt="")/
+									.service-list__item-icon
+										img(src="./assets/icon/payment-methods-icon-4.svg" width="48" height="16" alt="")/
+									.service-list__item-icon
+										img(src="./assets/icon/payment-methods-icon-5.svg" width="44" height="13" alt="")/
+									.service-list__item-icon
+										img(src="./assets/icon/payment-methods-icon-6.svg" width="37" height="15" alt="")/
+
+				.payment__wrapper.container
+					.h2._centered Вопросы и ответы
+
+					+accodrion-list([
+						{
+							class: 'true',
+							name: 'Как сделать заказ?',
+							pict: './assets/uploads/accordion-image-1.jpg',
+							text: 'Повседневная практика показывает, что начало <br /> повседневной работы по формированию позиции <br /> позволяет выполнять важные задания по разработке <br /> направлений прогрессивного развития.'
+						},
+						{
+							name: 'Как отследить статус заказа?',
+							text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+						},
+						{
+							name: 'Как отменить заказ?',
+							pict: 'http://placehold.it/285x190',
+							text: 'Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
+						}
+					])
+
+					.get-touch
+						.get-touch__text Остались вопросы? Напишите нам на почту <br/>
+							a(href="mailto:zoloto-yuga@mail.ru") zoloto-yuga@mail.ru
+							| &nbsp; или заполните форму
+						a.btn._black.get-touch__btn.popup-ask(href="#askAQuestion") Задать свой вопрос
+						.popup.mfp-hide#askAQuestion
+							p.popup__title  Задать вопрос
+							form.popup__form
+								label.popup__label Имя
+									input.popup__input.focus(type="text" placeholder="Как вас зовут?")
+								label.popup__label E-mail
+									input.popup__input(type="email" placeholder="email@mail.com")
+								label.popup__label Комментарий
+									textarea.popup__textarea(placeholder="Опишите проблему, с которой вы столкнулись, или поделитесь своими впечатлениями. Нам важно знать ваше мнение.")
+								label.popup__label.popup__label-checkbox
+									input.popup__input-hide(type="checkbox")
+									span.popup__checkbox
+									p.popup__checkbox-text Я согласен на
+										span  обработку персональных данных
+								button.btn._black(type="submit") Отправить
+						.popup-thanks.mfp-hide#askAQuestionThank
+							p.popup-thanks__title Спасибо, ваш вопрос принят!
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

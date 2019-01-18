@@ -1,0 +1,17 @@
+.subscribe-form {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	flex-basis: 450px;
+
+	&__field {
+		flex-basis: 180px;
+		margin-right: 40px;
+		margin-bottom: 5px;
+		font-size: 12px;
+	}
+
+	&__btn {
+		margin-bottom: 5px;
+	}
+}

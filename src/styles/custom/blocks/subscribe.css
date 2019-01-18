@@ -1,0 +1,35 @@
+.subscribe {
+	background: var(--orange-light);
+
+	&__inner {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 28px 0;
+	}
+
+	&__info {
+		position: relative;
+		padding-left: 70px;
+		color: var(--black);
+	}
+
+	&__info-pict {
+		position: absolute;
+		bottom: 7px;
+		left: 0;
+		display: block;
+		width: 47px;
+		height: 53px;
+	}
+
+	&__info-title {
+		font: 24px/29px var(--MontserratR);
+	}
+
+	&__info-desc {
+		font: 12px/24px var(--MontserratR);
+	}
+}

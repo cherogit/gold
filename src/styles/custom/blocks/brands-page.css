@@ -1,0 +1,36 @@
+.brands-page {
+	margin-bottom: calc(80 / 1920 * 100%);
+
+	&__wrapper {
+		padding-top: 30px;
+	}
+
+	&__promo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 8.3333%;
+	}
+
+	&__promo-pict {
+		display: block;
+		max-width: 44%;
+		height: auto;
+		margin-right: 3.75%;
+	}
+
+	&__promo-text {
+		flex-grow: 1;
+		width: 50%;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__desc {
+		font: 14px/30px var(--MontserratR);
+		color: var(--black);
+	}
+}

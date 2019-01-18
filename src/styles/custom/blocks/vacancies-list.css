@@ -1,0 +1,38 @@
+.vacancies-list {
+	margin-bottom: calc(100 / 1200 * 100%);
+	
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 25px 0;
+		border-bottom: 1px solid var(--border-gray);
+	}
+	
+	&__item-position {
+		margin-bottom: 10px;
+		font: 16px/20px var(--MontserratL);
+		color: var(--black);
+	}
+	
+	&__item-labels {
+		display: inline-flex;
+	}
+	
+	&__item-label {
+		display: inline-block;
+		padding: 0 18px 0 15px;
+		font: 13px/24px var(--MontserratL);
+		color: var(--black);
+		
+		&._city {
+			margin-right: 15px;
+			background: #e8ebfb;
+		}
+		
+		&._area {
+			background: #d8fbfd;
+		}
+	}
+}

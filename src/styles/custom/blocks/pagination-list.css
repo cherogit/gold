@@ -1,0 +1,26 @@
+.pagination-list {
+	display: flex;
+	align-items: center;
+	margin: 0 20px;
+	list-style: none;
+	font: 18px/26px var(--MontserratR);
+
+	&__item {
+		text-align: center;
+	}
+
+	&__link {
+		display: block;
+		padding: 0 15px;
+		color: var(--gray);
+		transition: 300ms;
+
+		&._active {
+			color: var(--black);
+		}
+
+		&:hover {
+			color: var(--orange);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.service {
+	margin-bottom: 65px;
+	
+	&__title {
+		margin-bottom: 5px;
+	}
+	
+	&__subtitle {
+		margin-bottom: 30px;
+	}
+}

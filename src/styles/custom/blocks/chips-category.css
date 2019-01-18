@@ -1,0 +1,54 @@
+.chips-category {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	font: 12px/40px var(--MontserratR);
+
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
+
+	&__name {
+		margin-right: 10px;
+		color: var(--black);
+	}
+
+	&__selected {
+		position: relative;
+		padding-right: 45px;
+		padding-left: 25px;
+		color: var(--gray-dark);
+		transition: 300ms;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			border-color: transparent;
+			box-shadow: 0 3px 7px rgba(0, 0, 0, .13);
+		}
+	}
+
+	&__selected-reset {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		display: block;
+		width: 9px;
+		height: 9px;
+		padding: 10px;
+		box-sizing: content-box;
+
+		&:hover svg {
+			fill: var(--orange);
+		}
+
+		svg {
+			display: block;
+			fill: var(--gray);
+			transition: 300ms;
+		}
+	}
+}

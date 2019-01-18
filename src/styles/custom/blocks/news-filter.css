@@ -1,0 +1,51 @@
+.news-filter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 65px;
+
+	&__btn {
+		position: relative;
+		display: block;
+		padding-right: 30px;
+		font: 16px/24px var(--MontserratL);
+		color: var(--gray-dark);
+		transition: 300ms;
+
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+
+		&:hover,
+		&._active {
+			color: var(--orange);
+
+			svg {
+				path,
+				rect,
+				circle {
+					fill: var(--orange);
+				}
+			}
+		}
+
+		svg {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			display: block;
+			max-width: 18px;
+			height: 18px;
+			fill: var(--black);
+
+			path,
+			rect,
+			circle {
+				fill: var(--black);
+				transition: 300ms;
+			}
+		}
+	}
+}

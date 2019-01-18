@@ -1,0 +1,25 @@
+include mixins/_breadcrumbs.pug
+include mixins/_dropdown-filter__list.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+
+			.test
+				.test__texture
+				.test__wrapper(style="background-color: #2faee0;")
+				<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.29 241.85"><polyline points="111.89 109.91 64.66 148.75 1.51 87.03 64.66 148.75 4.45 198.78 222.51 240.78"/><polyline points="223.31 241.82 230.22 12.87 157.43 72.78 121.93 1.61 157.43 72.78 112.22 109.91"/><path d="M-310.87,2138.17c-0.67-1.87-65-165.5-65-165.5l-96.29-28.42L-410.5,1901l108.38,10.58" transform="translate(533.01 -1899.97)"/><polyline points="222.68 239.62 64.85 148.78 60.39 44.72 1.01 86.03 4.2 198.59"/></svg>
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

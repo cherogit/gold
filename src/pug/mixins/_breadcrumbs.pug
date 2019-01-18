@@ -1,0 +1,10 @@
+mixin breadcrumbs(items, modifier)
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				for item, index in items
+					if (index === (items.length - 1))
+						li(class= (modifier) ? 'breadcrumbs__item' + ' ' + modifier : 'breadcrumbs__item')= item
+					else
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href='#')= item

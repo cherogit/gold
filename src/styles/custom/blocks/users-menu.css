@@ -1,0 +1,131 @@
+.users-menu {
+	display: flex;
+	justify-content: flex-end;
+	width: calc(50% - 115px);
+
+	&__search-btn {
+		position: relative;
+		display: block;
+		width: 20px;
+		height: 20px;
+		margin-right: 26px;
+
+		&:hover {
+			&::before {
+				box-shadow: 0 0 0 1px var(--orange);
+			}
+
+			&::after {
+				background: var(--orange);
+			}
+
+			&._js-active,
+			&._open {
+				&::before,
+				&::after {
+					background: var(--orange);
+				}
+			}
+		}
+
+		&._js-active,
+		&._open {
+			&::before {
+				transform: translate(0, 0) rotate(45deg);
+				transform-origin: -3px 6px 0;
+				width: 20px;
+				height: 1px;
+				box-shadow: none;
+				border-radius: 4px;
+				background: var(--black);
+			}
+
+			&::after {
+				transform: translate(0, -50%) rotate(-45deg);
+				transform-origin: 13px 1px 0;
+				width: 20px;
+				height: 1px;
+				border-radius: 4px;
+				background: var(--black);
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 14px;
+			height: 14px;
+			box-shadow: 0 0 0 1px var(--black);
+			border-radius: 50%;
+			background: white;
+			transition: 400ms cubic-bezier(.54, -.81, .57, .57);
+			z-index: 2;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 50%;
+			right: 0;
+			transform: translate(0, -50%) rotate(50deg);
+			transform-origin: 5px 5px 0;
+			display: block;
+			width: 18px;
+			height: 1px;
+			background: var(--black);
+			transition: 400ms cubic-bezier(.54, -.81, .57, .57);
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		font-size: 0;
+
+		&:not(:last-of-type) {
+			margin-right: 26px;
+		}
+
+		&:hover {
+			svg {
+				fill: var(--orange);
+			}
+		}
+
+		svg {
+			display: block;
+			width: 20px;
+			height: 20px;
+			transition: 300ms;
+		}
+	}
+
+	&__link-counter {
+		position: absolute;
+		display: block;
+		padding: 0 5px;
+		border-radius: 16px;
+		text-align: center;
+		background: var(--orange);
+		font: 9px/14px var(--MontserratR);
+		color: white;
+
+		.users-menu__link._basket & {
+			top: -8px;
+			right: -7px;
+		}
+
+		.users-menu__link._favorites & {
+			top: -8px;
+			right: -10px;
+		}
+	}
+}

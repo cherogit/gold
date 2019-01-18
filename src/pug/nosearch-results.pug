@@ -1,0 +1,39 @@
+include mixins/_breadcrumbs.pug
+include mixins/_catalog-list.pug
+include mixins/_dropdown-filter__list.pug
+include mixins/_chips.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header-noresults.pug
+
+		main.main
+			.search-results
+				.search-results__wrapper.container
+					.search-results__notfound
+						.search-results__notfound-title Ой, по вашему запросу ничего не найдено. Попробуйте изменить формулировку или посмотрите список наиболее популярных запросов:
+						ul.search-results__nav
+							li.search-results__nav-item
+								a.search-results__nav-link(href="./catalog-category.html") Кольца тонкие
+							li.search-results__nav-item
+								a.search-results__nav-link(href="./catalog-category.html") Серьги
+							li.search-results__nav-item
+								a.search-results__nav-link(href="./catalog-category.html") Подвески
+							li.search-results__nav-item
+								a.search-results__nav-link(href="./catalog-category.html") Кольца помолвочные
+							li.search-results__nav-item
+								a.search-results__nav-link(href="./catalog-category.html") Браслет с бриллиантами
+							li.search-results__nav-item
+								a.search-results__nav-link(href="./catalog-category.html") Золотая цепочка
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

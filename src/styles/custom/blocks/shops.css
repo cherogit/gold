@@ -1,0 +1,107 @@
+.shops {
+	&__banner {
+		width: 100%;
+		height: 270px;
+		margin: 0 auto 45px;
+		background: resolve(shops-banner.jpg) center / cover no-repeat;
+	}
+
+	&__control {
+		display: flex;
+	}
+
+	.dropdown-filter {
+		margin-right: auto;
+	}
+
+	&__buttons {
+		display: flex;
+		width: 348px;
+		height: 43px;
+		border: 1px solid black;
+		background-color: white;
+		color: black;
+
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			font-family: var(--MontserratR);
+			font-size: 12px;
+			text-transform: uppercase;
+			transition: 300ms;
+
+			&._js-active {
+				background-color: black;
+				color: white;
+			}
+		}
+	}
+
+	&__content {
+		padding-bottom: 90px;
+	}
+
+	&__content-item {
+		display: none;
+		transition: 300ms;
+
+		&._js-active {
+			display: block;
+			animation: show 400ms;
+		}
+	}
+
+	&__list-container {
+		position: relative;
+	}
+
+	&__sum {
+		position: absolute;
+		top: 20px;
+		left: 0;
+		font-size: 14px;
+		color: var(--gray-dark);
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	&__map {
+		height: 540px;
+		padding-top: 50px;
+	}
+
+	&__popup {
+		padding: 10px 0 10px 10px;
+		color: black;
+		font-family: var(--MontserratR);
+	}
+
+	&__popup-line {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+
+		svg {
+			width: 20px;
+			height: auto;
+			margin-right: 8px;
+		}
+
+		a {
+			font-family: var(--MontserratM);
+		}
+	}
+
+	&__popup-name {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+}

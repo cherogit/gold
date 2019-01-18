@@ -1,0 +1,4 @@
+.feedback {
+	width: calc(720 / 1200 * 100%);
+	margin: 0 auto calc(100 / 1200 * 100%);
+}

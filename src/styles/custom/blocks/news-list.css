@@ -1,0 +1,156 @@
+.news-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: calc(45 / 1200 * 100%);
+
+	&__item {
+		position: relative;
+		flex-grow: 1;
+		padding-bottom: 30.4%;
+		margin-bottom: calc(35 / 1200 * 100%);
+
+		&:nth-child(4n+1),
+		&:nth-child(4n) {
+			width: calc(730 / 1200 * 100%);
+		}
+
+		&:nth-child(4n+2),
+		&:nth-child(4n+3) {
+			width: calc(430 / 1200 * 100%);
+		}
+
+		&:nth-child(4n+2) {
+			margin-left: calc(35 / 1200 * 100%);
+		}
+
+		&:nth-child(4n+3) {
+			margin-right: calc(35 / 1200 * 100%);
+		}
+
+		&:hover {
+			.news-list__card-desc {
+				max-height: 365px;
+				opacity: 1;
+				transition: max-height 600ms ease-in, opacity 400ms 200ms;
+			}
+		}
+	}
+
+	&__item-label {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		font: 16px/30px var(--MontserratL);
+		color: var(--gray-dark);
+		background: var(--red-light);
+		border: 1px solid white;
+		transition: 300ms;
+		z-index: 2;
+
+		&:hover {
+			color: white;
+			background: var(--orange);
+			border-color: var(--orange);
+
+			svg {
+				fill: white;
+
+				path,
+				rect,
+				circle {
+					fill: white;
+					transition: 300ms;
+				}
+			}
+		}
+		
+		span {
+			display: block;
+			padding: 0 55px 0 24px;
+			white-space: nowrap;
+		}
+
+		svg {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			display: block;
+			max-width: 18px;
+			height: 18px;
+			fill: var(--black);
+
+			path,
+			rect,
+			circle {
+				fill: var(--black);
+				transition: 300ms;
+			}
+		}
+	}
+
+	&__card {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	&__card-pict {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		display: block;
+		min-width: 100%;
+		min-height: calc(100% - 120px);
+	}
+
+	&__card-info {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		max-height: 330px;
+		min-height: 120px;
+		padding: 10px 12%;
+		background: white;
+		border: 1px solid var(--border-gray);
+		text-align: center;
+		transition: 800ms;
+	}
+
+	&__card-date {
+		margin-bottom: 10px;
+		font: 14px/18px var(--MontserratL);
+		color: var(--gray);
+	}
+
+	&__card-title {
+		margin-bottom: 10px;
+		font: 24px/30px var(--MontserratEL);
+		color: var(--black);
+	}
+
+	&__card-desc {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		font: 16px/22px var(--MontserratL);
+		color: var(--gray-dark);
+		transition: max-height 600ms, opacity 600ms 0ms;
+	}
+}
+
+
+
+
+
+
+

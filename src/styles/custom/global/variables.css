@@ -1,0 +1,30 @@
+:root {
+	/*fonts*/
+	--postfix: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+	--MontserratT: 'Montserrat-Thin', var(--postfix);
+	--MontserratL: 'Montserrat-Light', var(--postfix);
+	--MontserratEL: 'Montserrat-ExtraLight', var(--postfix);
+	--MontserratR: 'Montserrat-Regular', var(--postfix);
+	--MontserratM: 'Montserrat-Medium', var(--postfix);
+
+	/*colors*/
+	--black: #000;
+	--gray: #999;
+	--gray-dark: #616161;
+	--gray-light: #d3d3d3;
+	--pale-gray: #f6f6f8;
+	--orange: #dfba8e;
+	--orange-light: #fff5ea;
+	--red-light: #fff4f4;
+	--border-gray: #e9e9e9;
+}
+
+@custom-media --mobile screen and (width >= 370px);
+@custom-media --tablet screen and (width >= 768px);
+@custom-media --laptop screen and (width >= 1025px);
+@custom-media --desktop screen and (width >= 1280px); /* Я изменил размер с 1200 на 1280 для карзины, так как ты вроде не применял еще нигде его. Как начнешь адаптировать, нужно будет решить этот момент. Скажи мне, чтоб мы поговорили */
+@custom-media --wide screen and (width >= 1366px);
+@custom-media --super screen and (width >= 1440px);
+@custom-media --ultra screen and (width >= 1600px);
+@custom-media --full screen and (width >= 1920px);
+

@@ -1,0 +1,150 @@
+include mixins/_breadcrumbs.pug
+include mixins/_accodrion-list.pug
+include mixins/_catalog-list.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+			.product
+				+breadcrumbs(['Каталог', 'Для женщин', 'Кольца', 'Кольца для женщин'])
+				.product__wrapper.container
+					.product__view
+						.product__slider-big
+							div.product__slider-item
+								img.product__slider-image(src="./assets/uploads/product-big.jpg" alt="")/
+							div.product__slider-item
+								img.product__slider-image(src="./assets/uploads/product1.jpg" alt="")/
+							div.product__slider-item
+								img.product__slider-image(src="./assets/uploads/product2.jpg" alt="")/
+						.product__slider-small
+							div.product__slider-item
+								img.product__slider-image(src="./assets/uploads/product-big.jpg" alt="")/
+							div.product__slider-item
+								img.product__slider-image(src="./assets/uploads/product1.jpg" alt="")/
+							div.product__slider-item
+								img.product__slider-image(src="./assets/uploads/product2.jpg" alt="")/
+					.product__desc
+						h1.product__title Кольцо из золота с фианитами
+						p.product__spec  Бренд
+							span  Sokolov
+						p.product__spec  Артикул
+							span  jwlr390000
+						.product__price
+							p.product__price-current 5 700 руб.
+							p.product__price-old 9 800 руб.
+							p.product__price-sticker -42% по акции
+						.product__size
+							p.product__size-title Размеры в наличии:
+							ul.product__size-list
+								li 15
+								li._disabled 15,5
+								li._disabled 16
+								li._disabled 16,5
+								li 17
+								li._disabled 17,5
+								li 18
+								li 18,5
+								li._disabled 19
+								li 19,5
+								li 20
+								li._disabled 20,5
+								li 21
+								li._disabled 21,5
+								li 22
+								li._disabled 22,5
+								li 23
+								li._disabled 23,5
+								li 24
+								li._disabled 24,5
+								li._border
+							a.product__size-fit(href="#fitSize") Подобрать размер
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.76 11.13"><path d="M4.38,11.13A4.38,4.38,0,1,1,8.76,6.75,4.39,4.39,0,0,1,4.38,11.13Zm0-7.76A3.38,3.38,0,1,0,7.76,6.75,3.38,3.38,0,0,0,4.38,3.37Z"/><polygon points="4.53 3.33 7.02 0.32 6.12 0 2.77 0 1.85 0.21 4.53 3.33"/></svg>
+							.popup.mfp-hide._big#fitSize
+								.popup__half
+									p.popup__title  Как подобрать размер кольца
+									ul.popup__number-list
+										li
+											span 1
+											p Возьмите полоску бумаги, ленточку из ткани или нитку и оберните ее вокруг основания пальца.
+										li
+											span 2
+											p Отметьте точку на полоске, где она делает полный круг.
+										li
+											span 3
+											p Измерьте расстояние от начала полоски до отметки.
+									.popup__image
+										img(src="./assets/img/fit-size.png" alt="")/
+									.popup__size
+										.popup__size-half
+											span.popup__size-title Введите результат
+											label
+												input.fir-size(type="number" placeholder="0")
+												| мм
+										.popup__size-half
+											span.popup__size-title Ваш размер кольца
+											.popup__size-result 0
+								.popup__half._pale
+									p.popup__title На что обратить внимание
+									p.popup__text Размер пальца изменяется в зависимости от температуры и времени суток
+									ul.popup__list-line
+										li Не стоит определять размер кольца:
+										li ранним утром, так как в это время пальцы ещё слегка отёкшие и размер может оказаться больше верного;
+										li после занятий спортом (причина также отёкшие пальцы);
+										li в слишком жаркую или холодную погоду. В жаркую погоду размер может оказать больше нужного,  в холодную (когда пальцы замёрзшие) – меньше. Температура тела должны быть в норме.
+						.product__control
+							button.btn._black В корзину
+							button.product__to-favorites В список желаний
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.89,12.51A7.8,7.8,0,0,1,1.51,8.63a4.79,4.79,0,0,1-.16-1.8A4.52,4.52,0,0,1,5.68,2.35,4.08,4.08,0,0,1,9.15,4.43l.79,1.4.82-1.39a4.32,4.32,0,0,1,3.63-2.09,4.5,4.5,0,0,1,4.25,4.41,4.69,4.69,0,0,1-.13,1.85,7.73,7.73,0,0,1-2.36,3.89L10,18Z"/></svg>
+							button.product__to-hint Намекнуть
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.8 10.7"><path d="M6 10.7L3.8 6.8 0 4.8 10.8 0zm-1.8-4L6 9.8l3.8-8.5zM.9 5l3 1.5L9.5 1z"/></svg>
+						.product__same
+							p.product__same-title В другом исполнении:
+							a.product__same-link(href="product.html")
+								img(src="./assets/uploads/card-img2.png" alt="")/
+							a.product__same-link(href="product.html")
+								img(src="./assets/uploads/card-img2.png" alt="")/
+							a.product__same-link(href="product.html")
+								img(src="./assets/uploads/card-img2.png" alt="")/
+							a.product__same-link(href="product.html")
+								img(src="./assets/uploads/card-img2.png" alt="")/
+						.product__services
+							p._gift Упаковка <br/> в подарок
+							p._delivery Бесплатная <br/> доставка
+							p._time Сроки доставки <br/> 1-3 дня
+				.product__list.container
+					p.product__list-title Дополните комплект
+					+catalog-list([
+                        {
+                            discount: '-97%',
+                            preview: ['./assets/uploads/card-img3.jpg'],
+                            title: 'ОДНА ФОТКА',
+                            price: '5 899 руб.',
+                            oldPrice: '49 765 руб.'
+                        },
+                        {
+                            preview: ['./assets/uploads/card-img4.jpg', './assets/uploads/card-img5.jpg', './assets/uploads/card-img6.jpg', './assets/uploads/card-img7.jpg'],
+                            title: 'Кольцо из золота с аместистами',
+                            price: '350 899 руб.',
+                        },
+                        {
+                            discount: '-42%',
+                            preview: ['./assets/uploads/card-img1.jpg', './assets/uploads/card-img2.png', './assets/uploads/card-img3.jpg'],
+                            title: 'Кольцо из золота с аместистами',
+                            price: '13 497 руб.',
+                            oldPrice: '22 314 руб.'
+                        },
+                        {
+                            discount: '-42%',
+                            preview: ['./assets/uploads/card-img1.jpg', './assets/uploads/card-img2.png', './assets/uploads/card-img3.jpg'],
+                            title: 'Кольцо из золота с аместистами',
+                            price: '132 056 руб.',
+                            oldPrice: '192 800 руб.'
+                        }
+                    ])
+		include includes/footer.pug
+		include includes/scripts.pug

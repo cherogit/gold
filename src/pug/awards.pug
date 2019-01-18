@@ -1,0 +1,110 @@
+include mixins/_breadcrumbs.pug
+include mixins/_dropdown-filter__list.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+		main.main
+			.awards
+				+breadcrumbs(['Главная', 'Награды'])
+				h1.visual-hidden Наши награды
+				.awards__wrapper.container
+					.awards__half
+						img.awards__image(src="./assets/img/awards.jpg" alt="")/
+					.awards__half
+						h2.awards__title.h1 Награды
+						p.awards__text Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа модели развития. Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание существенных финансовых и административных условий.
+					.awards__half
+						h2.awards__title.h1 Статуэтки
+						p.awards__text Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа модели развития. Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание существенных финансовых и административных условий.
+					.awards__half
+						.figurines
+							.figurines__dots.slider-wrap__dots
+							button.figurines__prev.slider-wrap__arrow._prev
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+							.figurines__list
+								.figurines__item
+									.figurines__image
+										img(src="./assets/img/awards-slider.jpg" alt="")/
+									p.figurines__desc Наименование конкурса / номинация
+								.figurines__item
+									.figurines__image
+										img(src="./assets/img/awards-slider.jpg" alt="")/
+									p.figurines__desc Наименование конкурса / номинация
+								.figurines__item
+									.figurines__image
+										img(src="./assets/img/awards-slider.jpg" alt="")/
+									p.figurines__desc Наименование конкурса / номинация
+							button.figurines__next.slider-wrap__arrow._next
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+					.awards__line
+						h2.awards__title.h1 Дипломы и сертификаты
+						p.awards__text С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+						.certificate
+							button.certificate__prev.slider-wrap__arrow._prev
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+							.certificate__list
+								.certificate__item
+									a.certificate__image(href="./assets/img/certificate.jpg")
+										img(src="./assets/img/certificate.jpg" alt="")/
+								.certificate__item
+									a.certificate__image(href="./assets/img/certificate.jpg")
+										img(src="./assets/img/certificate.jpg" alt="")/
+								.certificate__item
+									a.certificate__image(href="./assets/img/certificate.jpg")
+										img(src="./assets/img/certificate.jpg" alt="")/
+								.certificate__item
+									a.certificate__image(href="./assets/img/certificate.jpg")
+										img(src="./assets/img/certificate.jpg" alt="")/
+								.certificate__item
+									a.certificate__image(href="./assets/img/certificate.jpg")
+										img(src="./assets/img/certificate.jpg" alt="")/
+								.certificate__item
+									a.certificate__image(href="./assets/img/certificate.jpg")
+										img(src="./assets/img/certificate.jpg" alt="")/
+							button.certificate__next.slider-wrap__arrow._next
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+					.awards__line
+						h2.awards__title.h1 Электронные награды и номинации
+						.electronic
+							button.electronic__prev.slider-wrap__arrow._prev
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" width="3.92" height="3.92"/><rect x="2.68" y="1.55" width="24.04" height="0.83"/></svg>
+							.electronic__list
+								.electronic__item
+									.electronic__image
+										img(src="./assets/img/electronic-1.jpg")
+									.electronic__title Лучший ювелирный магазин 2016
+									.electronic__desc Навигатор ювелирной торговли
+								.electronic__item
+									.electronic__image
+										img(src="./assets/img/electronic-2.jpg")
+									.electronic__title лидер года 2016
+									.electronic__desc Russian Retail Awards
+								.electronic__item
+									.electronic__image
+										img(src="./assets/img/electronic-3.jpg")
+									.electronic__title лучший ювелирный магазин 2016
+									.electronic__desc Номинация Swarovski
+								.electronic__item
+									.electronic__image
+										img(src="./assets/img/electronic-1.jpg")
+									.electronic__title Лучший ювелирный магазин 2016
+									.electronic__desc Навигатор ювелирной торговли
+								.electronic__item
+									.electronic__image
+										img(src="./assets/img/electronic-2.jpg")
+									.electronic__title лидер года 2016
+									.electronic__desc Russian Retail Awards
+								.electronic__item
+									.electronic__image
+										img(src="./assets/img/electronic-3.jpg")
+									.electronic__title лучший ювелирный магазин 2016
+									.electronic__desc Номинация Swarovski
+							button.electronic__next.slider-wrap__arrow._next
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.72 3.92"><rect class="cls-1" x="22.8" width="3.92" height="3.92" transform="translate(49.52 3.92) rotate(180)"/><rect y="1.55" width="24.04" height="0.83" transform="translate(24.04 3.92) rotate(180)"/></svg>
+		include includes/footer.pug
+		include includes/scripts.pug

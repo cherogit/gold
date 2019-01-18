@@ -1,0 +1,84 @@
+include mixins/_breadcrumbs.pug
+
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+		
+		main.main
+			.brands-page
+				+breadcrumbs(['Главная', 'Бренды'])
+
+				.brands-page__wrapper.container
+					.brands-page__promo
+						img.brands-page__promo-pict(src="./assets/img/brands-page-img.png", alt="")/
+						.brands-page__promo-text
+							h1.h1.brands-page__title Бренды
+							.brands-page__desc
+								p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа модели развития. 
+								p Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание существенных финансовых условий.
+
+					.brands-filter
+						button.brands-filter__btn._all._active(type="button") 
+							span Все бренды
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.92 12.28"><g id="Слой_2" data-name="Слой 2"><g id="Capa_1" data-name="Capa 1"><rect x="7.04" y="0.06" width="8.88" height="0.75"/><rect x="7.04" y="3.83" width="8.88" height="0.75"/><rect x="7.04" y="7.6" width="8.88" height="0.75"/><rect x="7.04" y="11.37" width="8.88" height="0.75"/><rect x="4.59" width="0.75" height="12.28"/><rect x="1.13" y="3.68" width="0.75" height="3.44" transform="translate(-3.45 2.79) rotate(-46.62)"/><rect x="-0.15" y="6.94" width="3.44" height="0.75" transform="translate(-4.83 3.43) rotate(-46.62)"/></g></g></svg>
+						button.brands-filter__btn._jewellery(type="button") 
+							span Ювелирные изделия
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.17 13.86"><path d="M12.47,0h-11L0,4.79l7.17,9.07,7-9.08Zm-5,12.23L9.13,5.08H13ZM1.19,5.08H5l1.87,7.19Zm4.39-.75L4.65.75H9.36L8.53,4.33Zm2.78.75L7.15,10.34,5.78,5.08ZM4.81,4.33H.92L2,.75H3.88Zm4.49,0L10.13.75h1.81l1.28,3.58Z"/></svg>
+						button.brands-filter__btn._watch(type="button") 
+							span Часы
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.25 15.06"><g id="Слой_2" data-name="Слой 2"><g id="Layer_1" data-name="Layer 1"><path d="M8.25,7.38A4.11,4.11,0,0,0,6.67,4.15V0H1.38V4.32a4.07,4.07,0,0,0,0,6.11v4.63H6.67V10.6A4.08,4.08,0,0,0,8.25,7.38ZM2.13,14.31V11a4.09,4.09,0,0,0,2,.53,4.17,4.17,0,0,0,1.79-.42v3.23Zm2-3.56A3.38,3.38,0,1,1,7.5,7.38,3.37,3.37,0,0,1,4.13,10.75ZM5.92.75V3.68a4,4,0,0,0-1.79-.43,4.09,4.09,0,0,0-2,.54v-3Z"/><rect x="4.57" y="5.58" width="0.56" height="2.56"/><rect x="3.57" y="6.58" width="0.56" height="2.56" transform="translate(11.72 4.02) rotate(90)"/></g></g></svg>
+					.brands-list
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-1.svg", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-2.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-3.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-4.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-5.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-6.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-7.svg", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-8.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-9.png", alt="")/
+						a.brands-list__item(href="#")
+							img.brands-list__item-pict(src="./assets/uploads/new-collection__item-3.jpg", alt="")/
+							.brands-list__item-logo
+								img(src="./assets/img/brands-logo-10.png", alt="")/
+
+					.show-more
+						button.btn._white(type="button") Показать еще  12
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+

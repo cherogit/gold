@@ -1,0 +1,46 @@
+include mixins/_breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+	include includes/head.pug
+	body
+		include includes/preloader.pug
+		include includes/header.pug
+
+		main.main
+			.corporate-philosophy
+				+breadcrumbs(['Главная', 'Философия компании'])
+
+				.corporate-philosophy__wrapper
+					.container
+						h1.h1._centered Философия компании
+
+						.corporate-philosophy__item
+							.corporate-philosophy__item-pict
+								img(src="./assets/img/corporate-philosophy-img1.png" alt="")/
+							.corporate-philosophy__item-desc.text-block Любите ли Вы баловать себя и своих близких ювелирными изделиями? <br/> Если да, то салон "Золото России" – Ваш лучший в этом помощник. <br/> Уже второе десятилетие мы стремимся радовать наших клиентов. Мы совершенствуемся и приобретаем новый опыт, участвуем в российских и международных ювелирных выставках. И можем смело сказать, что качество и элегантность – ключевые черты ювелирных изделий, представленных в наших магазинах.
+
+						.corporate-philosophy__item
+							.corporate-philosophy__item-pict
+								img(src="./assets/img/corporate-philosophy-img2.png" alt="")/
+							.corporate-philosophy__item-desc.text-block
+								p В салонах "Золото России" Вы встретите чуткий и компетентный персонал, который поможет подобрать драгоценный аксессуар, подходящий именно Вам.
+								p Мы всегда стараемся найти индивидуальный подход к каждому клиенту, учитывающий все его пожелания, что делает процесс приобретения легким и приятным. Ведь благодарные отзывы покупателей – наша самая большая ценность.
+								p Вы выбираете, а мы делаем всё для того, чтобы Ваш выбор стал лучшим.
+
+
+
+
+
+
+
+
+
+
+
+		include includes/footer.pug
+		include includes/scripts.pug
+
+
+
+
